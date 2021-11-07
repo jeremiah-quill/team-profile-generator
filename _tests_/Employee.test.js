@@ -45,10 +45,14 @@ describe("Employee class", () => {
       const err = new Error("Expected parameter 'email' to be a string");
       expect(cb).toThrowError(err);
     });
-    it("throws an error if email does not end in '@someemaildomain.com'", () => {
-      const cb = () => new Employee("John Doe", "1", "johndoe@gmai");
+    it("throws an error if email does not contain an @ and end in .com'", () => {
+      // test for .com to be last 4 digits
+      const cb = () => new Employee("John Doe", 1, "johndoe@gmail");
+      // test for @ to be included somewhere in the email string
+      const cb2 = () => new Employee("John Doe", 1, "johndoegmail.com");
       const err = new Error("Expected parameter 'email' to be a valid email");
       expect(cb).toThrowError(err);
+      expect(cb2).toThrowError(err);
     });
   });
   describe("getName method", () => {
