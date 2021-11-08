@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+.team-header {
+  height: 20vh;
+  background: tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  /* width: 75%; */
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  /* border: 1px solid lightgray; */
+  width: 305px;
+  flex-basis: 250px;
+  /* flex-grow: 1; */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 1);
+  /* margin-bottom: 1em; */
+}
+
+.card-header {
+  background: royalblue;
+  color: white;
+  font-weight: bold;
+  padding: 1em;
+}
+
+.card-header h2 {
+  margin-bottom: 0.5em;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: lightgray;
+}
+
+.card-content {
+  background-color: white;
+  /* margin: 3em; */
+  font-size: 0.75em;
+  border-radius: 1em;
+}
+
+.card-content > div {
+  /* border-top: 1px solid gray;
+  border-bottom: 1px solid gray; */
+  padding: 1em;
+}
+
+.card-content > div:first-child {
+  border-bottom: 1px solid lightgray;
+}
+.card-content > div:last-child {
+  border-top: 1px solid lightgray;
+}
+
+.role-container {
+  display: flex;
+}
+
+.role-icon {
+  width: 25px;
+}

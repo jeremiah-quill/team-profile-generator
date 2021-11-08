@@ -1,19 +1,3 @@
-// The first class is an `Employee` parent class with the following properties and methods:
-
-// * `name`
-
-// * `id`
-
-// * `email`
-
-// * `getName()`
-
-// * `getId()`
-
-// * `getEmail()`
-
-// * `getRole()`&mdash;returns `'Employee'`
-
 const Employee = require("../lib/Employee.js");
 
 describe("Employee class", () => {
@@ -26,17 +10,13 @@ describe("Employee class", () => {
         email: "johndoe@gmail.com",
       });
     });
-    it("throws an error if missing any arguments", () => {
-      const cb = () => new Employee();
-      expect(cb).toThrow();
-    });
     it("throws an error if name is not a string", () => {
       const cb = () => new Employee(1, 1, "johndoe@gmail.com");
       const err = new Error("Expected parameter 'name' to be a string");
       expect(cb).toThrowError(err);
     });
-    it("throws an error if id is not a number", () => {
-      const cb = () => new Employee("John Doe", "1", "johndoe@gmail.com");
+    it("throws an error if id is NaN", () => {
+      const cb = () => new Employee("John Doe", NaN, "johndoe@gmail.com");
       const err = new Error("Expected parameter 'id' to be a number");
       expect(cb).toThrowError(err);
     });
@@ -75,7 +55,7 @@ describe("Employee class", () => {
     });
   });
   describe("getRole method", () => {
-    it("returns employee email", () => {
+    it("returns role as 'Employee'", () => {
       expect(new Employee("John Doe", 1, "johndoe@gmail.com").getRole()).toBe(
         "Employee"
       );
