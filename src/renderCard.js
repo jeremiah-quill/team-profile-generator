@@ -1,14 +1,4 @@
-// const renderRoleInfo = require("./renderRoleInfo");
-
-const renderRoleInfo = (employee) => {
-  if (employee.getRole() == "Manager") {
-    return `Office #: ${employee.officeNumber}`;
-  } else if (employee.getRole() == "Engineer") {
-    return `Github: <a target="_blank" href=https://github.com/jeremiah-quill>${employee.github}</a>`;
-  } else {
-    return `School: ${employee.school}`;
-  }
-};
+const renderRoleInfo = require("./renderRoleInfo");
 
 const renderCard = (employee) => {
   return `
@@ -16,7 +6,7 @@ const renderCard = (employee) => {
     <header class="card-header">
       <h2>${employee.name}</h2>
       <div class="role-container">
-      <img class="role-icon" src="../src/${employee.getRole()}.png">
+      <img class="role-icon" src="../dist/images/${employee.getRole()}.png">
         <div class="role-name">${employee.getRole()}</div>
       </div>
     </header>

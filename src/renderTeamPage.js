@@ -1,7 +1,7 @@
 const renderCard = require("./renderCard");
 const fs = require("fs");
 
-const renderTeam = (team) => {
+const renderTeamPage = (team) => {
   const teamHtml = `
   <!DOCTYPE html>
 <html lang="en">
@@ -35,4 +35,4 @@ const renderTeam = (team) => {
   });
 };
 
-module.exports = renderTeam;
+module.exports = renderTeamPage;
