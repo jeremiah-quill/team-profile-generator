@@ -38,7 +38,10 @@ npm i
 ## Usage
 
 ​
-Use this tool when you want to create an org chart for a dev team.
+
+```
+node index
+```
 
 ## License
 
@@ -58,7 +61,7 @@ To run tests, run the following command:
 ​
 
 ```
-npm test
+npx jest test
 ```
 
 ​
