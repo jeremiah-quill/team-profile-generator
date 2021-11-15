@@ -37,11 +37,11 @@ npm i
 
 ## Usage
 
-​
-
 ```
 node index
 ```
+
+Please see a demo video for how to use this team profile generator: https://www.youtube.com/watch?v=4Mud-JymqEE&ab_channel=JeremiahQuill
 
 ## License
 
